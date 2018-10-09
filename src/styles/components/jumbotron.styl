@@ -1,0 +1,50 @@
+.jumbotron
+  width: 100vw
+  height: 100vh
+  background: url("../images/jumbotron.svg") no-repeat
+  mixin-background-size()
+
+.navigation
+  flex-row()
+  width: 83%
+  margin: 0 auto
+  margin-right: 5%
+  padding-top: 50px
+  ul
+    margin-left: auto
+    margin-top: 20px
+    flex-row()
+    list-style: none
+    li
+      padding: 0 25px
+      font-size: $nav-font-size
+      line-height: $nav-line-height
+      text-align: left
+      font-weight: $bold
+      color: $medium-grey
+      &:hover
+        color: $white
+        cursor: pointer
+
+.tittle
+  margin: 80px 0 0 14%
+  max-width: 540px
+  font-size: 68px
+  line-height: 96px
+  font-weight: $bold
+  overflow-wrap: normal
+  color: $white
+  span
+    display: block
+    color: $secondary-color
+    line-height: 108px
+    background-color: $primary-color
+    width: 295px
+    padding: 0 30px
+
+.slogan
+  margin-left: 15%
+  color: $white
+  max-width: 530px
+  font-size: 18px
+  line-height: 29px
