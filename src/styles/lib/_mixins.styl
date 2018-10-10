@@ -13,3 +13,31 @@ mixin-background-size(type = cover)
   -webkit-background-size: type;
   -moz-background-size: type;
   -o-background-size: type;
+
+// handles font-size and padding for the main nav
+mixin-jumbotron-nav()
+  font-size: $nav-font-size
+  padding: 0 $nav-li-padding
+  +below($xl)
+    font-size: $nav-font-size - 4px
+    padding: 0 ($nav-li-padding - 4px)
+  +below($md)
+    font-size: $nav-font-size - 8px
+    padding: 0 ($nav-li-padding - 8px)
+  +below($sm)
+    font-size: $nav-font-size - 12px
+    padding: 0 ($nav-li-padding - 12px)
+  +below($xs)
+    font-size: $nav-font-size - 16px
+    padding: 0 ($nav-li-padding - 18px)
+
+mixin-jumbotron-title()
+  font-size: $jumbotron-title-font-size
+  +below($xl)
+    font-size: $jumbotron-title-font-size - 8px
+  +below($md)
+    font-size: $jumbotron-title-font-size - 16px
+  +below($sm)
+    font-size: $jumbotron-title-font-size - 24px
+  +below($xs)
+    font-size: $jumbotron-title-font-size - 32px
