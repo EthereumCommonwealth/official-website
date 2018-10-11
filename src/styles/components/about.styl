@@ -1,0 +1,23 @@
+.about
+  height: 60vh
+  +below($md)
+    height: 95vh
+  +below($sm)
+    height: 100vh
+  +below($xs)
+    height: 120vh
+  +below($x-small)
+    height: 145vh
+  background-color: $white
+  .grid-container
+    height: 90%
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    grid-template-rows: auto 1fr
+    div
+      margin-top: 45px
+      mixin-left-identation()
+    img
+      width: 95%
+      align-self: center
+

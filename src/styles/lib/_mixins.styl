@@ -40,4 +40,14 @@ mixin-jumbotron-title()
   +below($sm)
     font-size: $jumbotron-title-font-size - 24px
   +below($xs)
-    font-size: $jumbotron-title-font-size - 32px
+    font-size: $jumbotron-title-font-size - 36px
+
+mixin-left-identation()
+  margin-left: $left-identation
+  +below($xl)
+    margin-left: 0
+
+mixin-custom-container()
+  padding: 5.5% 3% 5.5% 10%
+  +below($sm)
+    padding: 15px

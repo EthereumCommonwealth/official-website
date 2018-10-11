@@ -4,7 +4,7 @@ import Logo from '../../images/logo.svg';
 import GithubIcon from '../../images/github.svg';
 
 const Jumbotron = () => (
-  <div className="container jumbotron">
+  <div className="jumbotron">
     <nav className="navigation">
       <img src={Logo} alt="" />
       <ul>
