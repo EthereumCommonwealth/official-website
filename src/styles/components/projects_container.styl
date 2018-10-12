@@ -4,34 +4,43 @@
     margin-top: 35px
     flex-column()
     mixin-left-identation()
+    +below($sm)
+      align-items: center
     .project
+      max-width: 1000px
+      margin-bottom: 40px
       background-color: $white
       box-shadow: 0px 6px 18px rgba(40, 53, 64, 0.06);
       border-radius: 12px;
       padding: 45px
       display: grid
+      margin-right: 10%
       grid-template-columns: repeat(5, .6fr) repeat(5, 1fr)
-      grid-template-rows: repeat(4, 1fr)
       +below($sm)
+        max-width: 360px
         flex-column()
         padding: 15px
+        margin-right: 0
         & > *
           margin-bottom: 25px
       .project-title
         flex-row(nowrap)
         align-items: center
-        grid-column: 1 / 5
-        img
-          margin-right: 15%
+        grid-column: 1 / 6
+        img, span
+          margin-right: 10%
           width: 50px
           height: 50px
           +below($sm)
             margin-right: 10%
+        span
+          background-color: $medium-grey
+          border-radius: 50%
         h3
           font-size: 30px
           margin: 0
           font-weight: 500
-          color: #005EEB
+          color: $secondary-color
       button
         grid-column: 2 / 4
         width: 160px
@@ -40,7 +49,7 @@
           margin-top: 30px
           justify-self: center
       p
-        grid-column: 6 / -1
+        grid-column: 7 / -1
         grid-row-start: 1
         grid-row-end: span 6
       .social-icons
@@ -53,5 +62,9 @@
           &:hover
             cursor: pointer
           margin-left: 15px
-          width: 50px
-          height: 50px
+          margin-top: 80px
+          width: 40px
+          height: 40px
+          +below($sm)
+            margin-right: 15px
+            margin-left: 0

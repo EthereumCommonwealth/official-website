@@ -1,5 +1,5 @@
-const rupture = require("rupture");
-const nib = require("nib");
+const rupture = require('rupture');
+const nib = require('nib');
 
 module.exports = {
   siteMetadata: {
@@ -8,7 +8,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     {
-      resolve: "gatsby-plugin-stylus",
+      resolve: 'gatsby-plugin-stylus',
       options: {
         use: [nib(), rupture()],
       },
