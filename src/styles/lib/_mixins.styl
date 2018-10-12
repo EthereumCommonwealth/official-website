@@ -51,3 +51,10 @@ mixin-custom-container()
   padding: 5.5% 3% 5.5% 10%
   +below($sm)
     padding: 15px
+
+mixin-custom-btn($background-color, $box-shadow-color)
+  background-color: $background-color
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  &:hover
+    cursor: pointer
+    box-shadow: 0px 8px 16px $box-shadow-color
