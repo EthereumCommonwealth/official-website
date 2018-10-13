@@ -4,7 +4,7 @@ import Project from './Project';
 import { projectsdata } from '../../data/projectsdata';
 
 const ProjectsContainer = () => (
-  <div className="custom-container projects-container">
+  <div id="projects" className="custom-container projects-container">
     <div className="title">
       <span />
       <h3>projects</h3>

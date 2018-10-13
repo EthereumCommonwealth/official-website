@@ -3,7 +3,7 @@ import Avatar from '../../images/yohangraterol.jpg';
 import Logo from '../../images/logo.svg';
 
 const Team = () => (
-  <div className="team-container">
+  <div id="team" className="team-container">
     <div className="title">
       <span />
       <h3>our team</h3>

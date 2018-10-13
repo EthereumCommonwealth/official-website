@@ -8,13 +8,13 @@ const Jumbotron = () => (
     <nav className="navigation">
       <img src={Logo} alt="" />
       <ul>
-        <li>
+        <li onClick={handleScroll.bind(this, 'about')}>
           About
         </li>
-        <li>
+        <li onClick={handleScroll.bind(this, 'projects')}>
           Projects
         </li>
-        <li>
+        <li onClick={handleScroll.bind(this, 'team')}>
           Team
         </li>
         <li>
@@ -36,5 +36,10 @@ const Jumbotron = () => (
     </section>
   </div>
 );
+
+const handleScroll = (id, e) => {
+  var element = document.getElementById(id);
+  element.scrollIntoView({block: 'start', behavior: 'smooth'});
+}
 
 export default Jumbotron;

@@ -3,7 +3,7 @@ import Logo from '../../images/logo.svg';
 import CurlyThing from '../../images/curlything.svg';
 
 const About = () => (
-  <div className="about custom-container">
+  <div id="about" className="about custom-container">
     <div className="title">
       <span />
       <h3>about</h3>
