@@ -1,16 +1,11 @@
 import React from 'react';
-import Twitter from '../../images/social-icons/twitter.svg';
-import Telegram from '../../images/social-icons/telegram.svg';
-import Github from '../../images/social-icons/github.svg';
-import Discord from '../../images/social-icons/discord.svg';
-import Logo from '../../images/logo.svg';
 import * as constants from '../../data/constants';
 
 const Project = ({ data }) => {
   return (
     <div className="project">
       <div className="project-title">
-        {data.logoPath === undefined ? <span /> : <img src={Logo} alt="" />}
+        {data.logoClass === undefined ? <span className="default-logo" /> : <span className={data.logoClass} />}
         <h3>{data.name}</h3>
       </div>
       <button type="button" className="btn btn-primary">
@@ -24,13 +19,29 @@ const Project = ({ data }) => {
           data.socialLinks.map((element, index) => {
             switch (element.type) {
               case constants.TWITTER:
-                return <img key={`${index}-${element.type}`} src={Twitter} alt="Twitter link" />;
+                return (
+                  <a className="team-member-social-item" href="#">
+                    <i className="fab fa-twitter" />
+                  </a>
+                );
               case constants.GITHUB:
-                return <img key={`${index}-${element.type}`} src={Github} alt="Github link" />;
+                return (
+                  <a className="team-member-social-item" href="#">
+                    <i className="fab fa-github" />
+                  </a>
+                );
               case constants.DISCORD:
-                return <img key={`${index}-${element.type}`} src={Discord} alt="Discord link" />;
+                return (
+                  <a className="team-member-social-item" href="#">
+                    <i className="fab fa-discord" />
+                  </a>
+                );
               case constants.TELEGRAM:
-                return <img key={`${index}-${element.type}`} src={Telegram} alt="Telegram link" />;
+                return (
+                  <a className="team-member-social-item" href="#">
+                    <i className="fab fa-telegram-plane" />
+                  </a>
+                );
               default:
                 return null;
             }

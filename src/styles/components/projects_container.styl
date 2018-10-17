@@ -1,3 +1,10 @@
+.callisto-logo
+  background: url("../images/project-icons/callisto.svg") no-repeat
+
+.xinfra-logo
+  background: url("../images/project-icons/0xinfra.svg") no-repeat
+  margin-right: 0 !important
+
 .projects-container
   background-color: $background-grey
   .projects-column
@@ -27,13 +34,13 @@
         flex-row(nowrap)
         align-items: center
         grid-column: 1 / 6
-        img, span
-          margin-right: 10%
+        span
+          margin-right: 8%
           width: 50px
           height: 50px
           +below($sm)
             margin-right: 10%
-        span
+        .default-logo
           background-color: $medium-grey
           border-radius: 50%
         h3
@@ -58,13 +65,23 @@
         grid-column-end: 6
         align-self: center
         flex-row()
-        img
-          &:hover
-            cursor: pointer
+        margin-top: 80px
+        a
+          margin-top: 10px
+          flex-row(nowrap)
+          justify-content: center
           margin-left: 15px
-          margin-top: 80px
-          width: 40px
-          height: 40px
-          +below($sm)
-            margin-right: 15px
-            margin-left: 0
+          i
+            flex-row(nowrap)
+            color: $white
+            background-color: $medium-grey
+            align-items: center
+            justify-content: center
+            padding: 0.5em
+            border-radius: 100%
+            font-size: 20px
+            margin: 0 4px
+            text-decoration: none
+            transition: all 150ms ease
+            &:hover
+              background-color: $primary-color
