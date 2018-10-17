@@ -1,0 +1,47 @@
+body
+  font-family $base-font
+  background-color $gray
+
+figure
+  margin 0
+
+a
+  color $primary-color
+  font-weight 600
+  text-decoration none
+
+p, li
+  margin 10px
+  font-style: normal
+  color: $medium-grey
+  line-height: 29px
+
+ul, ol
+  padding-left: 16px
+
+.title
+  width: 200px
+  display: grid
+  margin-top: 20px
+  grid-template-columns: .5fr repeat(3, auto) 1fr
+  grid-template-rows: 15px 45px 5px
+  img
+    width: 15px
+    height: 15px
+    grid-column-start: 5
+    justify-self: center
+  span
+    background-color: $medium-grey
+    height: 5px
+    grid-column: 1 / 3
+    grid-row-start: 3
+  h3
+    font-size: $title-font-size
+    color: $title-color
+    margin-left: 20px
+    grid-column: 2 / 5
+    grid-row-start: 1
+    text-transform: uppercase
+
+.custom-container
+  mixin-custom-container()

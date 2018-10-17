@@ -1,21 +1,19 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import SampleComponent from '../components/SampleComponent.jsx'
+import React, { Component } from 'react';
+import axios from 'axios';
+import Footer from '../components/Footer';
+import Jumbotron from '../components/landing/Jumbotron';
+import About from '../components/landing/About';
+import ProjectsContainer from '../components/landing/ProjectsContainer';
+import Team from '../components/landing/Team';
 
 const IndexPage = () => (
-  <div className="container">
-    <h1>Hi people</h1>
-    <p>Welcome Callisto Gatsby Starter</p>
-    <p>Now go build something great.</p>
-    {/* <SampleComponent /> */}
-    <br />
-    <Link
-      className="btn"
-      to="/page-2/"
-    >
-      Go to page 2
-    </Link>
+  <div>
+    <Jumbotron />
+    <About />
+    <ProjectsContainer />
+    <Team />
+    <Footer />
   </div>
-)
+);
 
-export default IndexPage
+export default IndexPage;
