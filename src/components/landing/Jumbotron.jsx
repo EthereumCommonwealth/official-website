@@ -3,6 +3,12 @@ import Link from 'gatsby-link';
 import Logo from '../../images/logo.svg';
 import GithubIcon from '../../images/github.svg';
 
+const handleScroll = (id, e) => {
+  const element = document.getElementById(id);
+  element.scrollIntoView({ block: 'start', behavior: 'smooth' });
+};
+
+
 const Jumbotron = () => (
   <div className="jumbotron">
     <nav className="navigation">
@@ -36,10 +42,5 @@ const Jumbotron = () => (
     </section>
   </div>
 );
-
-const handleScroll = (id, e) => {
-  var element = document.getElementById(id);
-  element.scrollIntoView({block: 'start', behavior: 'smooth'});
-}
 
 export default Jumbotron;
