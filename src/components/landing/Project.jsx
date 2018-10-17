@@ -1,5 +1,14 @@
 import React from 'react';
-import * as constants from '../../data/constants';
+import BitcounTalkIcon from '../../images/social-icons/bitcoinTalk.svg';
+import BitcounTalkIconHover from '../../images/social-icons/bitcoinTalkHover.svg';
+
+const handleMouseOver = (e) => {
+  e.target.setAttribute('src', BitcounTalkIconHover);
+};
+
+const handleMouseOut = (e) => {
+  e.target.setAttribute('src', BitcounTalkIcon);
+};
 
 const Project = ({ data }) => {
   return (
@@ -16,35 +25,34 @@ const Project = ({ data }) => {
       </p>
       <div className="social-icons">
         {
-          data.socialLinks.map((element, index) => {
-            switch (element.type) {
-              case constants.TWITTER:
-                return (
-                  <a className="team-member-social-item" href="#">
-                    <i className="fab fa-twitter" />
-                  </a>
-                );
-              case constants.GITHUB:
-                return (
-                  <a className="team-member-social-item" href="#">
-                    <i className="fab fa-github" />
-                  </a>
-                );
-              case constants.DISCORD:
-                return (
-                  <a className="team-member-social-item" href="#">
-                    <i className="fab fa-discord" />
-                  </a>
-                );
-              case constants.TELEGRAM:
-                return (
-                  <a className="team-member-social-item" href="#">
-                    <i className="fab fa-telegram-plane" />
-                  </a>
-                );
-              default:
-                return null;
+          data.socialLinks.map((element) => {
+            if (element.bitcoinTakl) {
+              return (
+                <a
+                  href={element.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  key={`${element.url}${element.prefix}`}
+                >
+                  <img
+                    id="bitcoinTalk"
+                    src={BitcounTalkIcon}
+                    onMouseOver={handleMouseOver}
+                    onMouseOut={handleMouseOut}
+                  />
+                </a>
+              );
             }
+            return (
+              <a
+                href={element.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={`${element.url}${element.prefix}`}
+              >
+                <i className={element.prefix} />
+              </a>
+            );
           })
         }
       </div>

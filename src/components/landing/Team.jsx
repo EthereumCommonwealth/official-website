@@ -14,7 +14,7 @@ const Team = () => {
       <div className="team-members-container">
         {
           team.map((element) => {
-            return <TeamMember data={element} key={element.name} />;
+            return <TeamMember data={element} key={element.position} />;
           })
         }
       </div>

@@ -24,7 +24,13 @@ const Jumbotron = () => (
           Team
         </li>
         <li>
-          <img src={GithubIcon} alt="" />
+          <a
+            href="https://github.com/EthereumCommonwealth"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={GithubIcon} alt="" />
+          </a>
         </li>
       </ul>
     </nav>

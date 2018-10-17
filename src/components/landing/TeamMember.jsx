@@ -14,7 +14,13 @@ const TeamMember = ({ data }) => (
       {
         data.socialNetworks.map((element) => {
           return (
-            <a className="team-member-social-item" href={element.url} target="_blank">
+            <a
+              className="team-member-social-item"
+              href={element.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              key={`${element.url}${element.prefix}`}
+            >
               <i className={element.prefix} />
             </a>
           );
