@@ -1,0 +1,60 @@
+flex-row(type = wrap)
+  display: flex
+  flex-direction: row
+  flex-wrap: type
+
+flex-column(type = wrap)
+  display: flex
+  flex-direction: column
+  flex-wrap: type
+
+mixin-background-size(type = cover)
+  background-size: type
+  -webkit-background-size: type;
+  -moz-background-size: type;
+  -o-background-size: type;
+
+// handles font-size and padding for the main nav
+mixin-jumbotron-nav()
+  font-size: $nav-font-size
+  padding: 0 $nav-li-padding
+  +below($xl)
+    font-size: $nav-font-size - 4px
+    padding: 0 ($nav-li-padding - 4px)
+  +below($md)
+    font-size: $nav-font-size - 8px
+    padding: 0 ($nav-li-padding - 8px)
+  +below($sm)
+    font-size: $nav-font-size - 12px
+    padding: 0 ($nav-li-padding - 12px)
+  +below($xs)
+    font-size: $nav-font-size - 16px
+    padding: 0 ($nav-li-padding - 18px)
+
+mixin-jumbotron-title()
+  font-size: $jumbotron-title-font-size
+  +below($xl)
+    font-size: $jumbotron-title-font-size - 8px
+  +below($md)
+    font-size: $jumbotron-title-font-size - 16px
+  +below($sm)
+    font-size: $jumbotron-title-font-size - 24px
+  +below($xs)
+    font-size: $jumbotron-title-font-size - 36px
+
+mixin-left-identation()
+  margin-left: $left-identation
+  +below($xl)
+    margin-left: 0
+
+mixin-custom-container()
+  padding: 5.5% 3% 5.5% 10%
+  +below($sm)
+    padding: 15px
+
+mixin-custom-btn($background-color, $box-shadow-color)
+  background-color: $background-color
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  &:hover
+    cursor: pointer
+    box-shadow: 0px 8px 16px $box-shadow-color
